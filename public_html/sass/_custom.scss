@@ -1,0 +1,244 @@
+// Your custom SCSS should be written here...
+
+body{
+    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=ada882&noise=3d3c3d&density=73&opacity=8');
+}
+
+#header{
+    background-image: url('http://api.thumbr.it/whitenoise-361x370.png?background=e4e298&noise=3d3c3d&density=73&opacity=8');
+    padding:$standard-padding;
+    margin-top: $standard-padding;
+    height:300px;
+    border:1px solid $navbar-color;
+    border-bottom-color:rgba(0,0,0,0);
+    
+    #logo{
+        padding: 40px 0 0 0;
+    }
+    
+    p{
+        padding: 0 0 0 40px;
+    }
+}
+
+
+
+#header-img{
+    background-image:url('../img/header.png');
+    background-size:100%;
+    background-position:right bottom; /* IE fix */
+    background-repeat: no-repeat;
+    height:300px;
+}
+
+#nav1{
+    /*
+    background-image: url('../img/menu-bg.png');
+    background-position: right top;
+    background-repeat:no-repeat;*/
+    -webkit-box-shadow: 7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+}
+
+.site-body{
+    padding:$standard-padding;
+    border-left:1px solid $navbar-color;
+    border-right:1px solid $navbar-color;
+    background: url('http://api.thumbr.it/whitenoise-361x370.png?background=e4e298&noise=3d3c3d&density=73&opacity=8');
+    margin: -20px 0 0 0;
+}
+
+#mobile-header{
+    border-bottom: 5px dashed white;
+    margin-bottom: $standard-padding;
+}
+
+.blog-body{
+    padding: $standard-padding;
+    background: rgba(255,255,255,0.5);
+    @include border-radius(10px);
+    h5{
+        font-size:22px;
+        
+    }
+    
+    .sinopse{
+        font-style:italic;
+        padding: 0 0 0 $standard-padding;
+    }
+    
+    .tags{
+        
+    }
+}
+
+.latest-product-listing{
+    padding: $standard-padding;
+    background: rgba(255,255,255,0.5);
+    position: relative;
+    @include border-radius(10px);
+    z-index:200;
+    h5{
+        font-size:30px;
+    }
+    
+    .buy-now:before{
+        content: "\00BB";
+    }
+    
+    .quickview:before{
+        content: "\002B";
+    }
+    
+    .pill-left{
+        float:right;
+    }
+    
+    /*.overlay {
+        i{
+            font-size:50px;
+        }
+        display:none;
+        @include border-radius(10px);
+        background: rgba(255,255,255,0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index:300;
+    } */   
+}
+
+.modal{
+    img{
+        float:left;
+    }
+    
+    .description{
+        padding: $standard-padding;
+    }
+}
+
+/*.latest-product-listing:hover > .overlay{
+    display:block;
+}*/
+
+.section-title{
+    color:white;
+    background: $section-separator-color-stripe-one;
+    background: repeating-linear-gradient(
+        139deg,
+        $section-separator-color-stripe-one,
+        $section-separator-color-stripe-one 10px,
+        $section-separator-color-stripe-two 10px,
+        $section-separator-color-stripe-two 20px
+    );
+    -webkit-box-shadow: 7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 19px 0px rgba(50, 50, 50, 0.75);
+    margin: $standard-padding 0 $standard-padding 0;
+    padding: $small-padding;
+    @include border-radius(10px);
+}
+
+.well{
+    background: rgba(255,255,255,0.5);
+    padding: $standard-padding;
+    margin: 0 0 $standard-padding 0;
+    @include border-radius(10px);
+}
+
+.social-icons{
+    font-size:3.4em;
+    i{
+        margin: 10px 0 10px 0;
+    }
+}
+
+.icon-facebook-squared{
+    color:#3b5998;
+}
+
+.icon-twitter{
+    color:#4099FF;
+}
+
+.icon-pinterest{
+    color:#C92228;
+}
+
+.icon-gplus{
+    color:#D34836;
+}
+
+.icon-linkedin{
+    color:#0E76A8;
+}
+
+.metadata span{
+    font-weight:bold;
+}
+
+.hide-on-phones{
+    @include hidden(all-phones);
+}
+
+.show-on-phones{
+    @include hidden(desktop);
+    @include hidden(tablets);
+    @include visible(all-phones);
+}
+
+@include respond(all-phones){
+    .row{
+        padding: 0 0 0 0;
+    }
+}
+
+
+
+
+
+
+
+
+// BX Slider overrides
+
+.bx-wrapper .bx-viewport {
+	/*-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;*/
+	border:  5px solid #fff;
+	left: 0;
+	background: #fff;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: white;
+   border:5px solid rgba(0,0,0,0);
+    width: 15px;
+    height: 15px;
+    box-sizing: border-box;
+    @include my-border-radius(10px);
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: rgba(0,0,0,0);
+    border:5px solid white;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 0px;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    z-index: 300;
+}
+
+// Pikachoose overrides
+
+.pika-stage{
+    height:100%;
+}
